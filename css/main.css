@@ -1,0 +1,27 @@
+*{padding:0;margin:0; transition:0.5s all;}
+a{text-decoration:none;}
+input{outline:none;}
+li{list-style:none;}
+
+#head_nav {
+  background-color: #3c3c3c;
+  width:100%;
+  height:50px;
+  opacity:0.8;
+}
+
+#header {
+  background-color: #f9ecce;
+  height:300px;
+  overflow: hidden;
+}
+
+#main {
+  background-color: #f7fff3;
+  height:1000px;
+}
+
+#footer {
+  background-color: #3c3c3c;
+  height:100px;
+}
