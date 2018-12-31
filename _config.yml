@@ -78,6 +78,6 @@ theme: kano
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+  type:  git
   repository: git@github.com:kano233333/kano233333.github.io.git
   branch: master
