@@ -1,0 +1,75 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        vue问题
+    </h1>
+    <h2 id="Array-Object-更新后，DOM不能实时渲染"><a href="#Array-Object-更新后，DOM不能实时渲染" class="headerlink" title="Array  Object  更新后，DOM不能实时渲染"></a>Array  Object  更新后，DOM不能实时渲染</h2><ul>
+<li><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    isActive:&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:10px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span><span class="selector-pseudo">:red</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in list"</span> <span class="attr">:class</span>=<span class="string">"isActive:item.active"</span> @<span class="attr">click</span>=<span class="string">"itemClick(item)"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="undefined">    data:&#123;</span></span><br><span class="line"><span class="undefined">        list:[</span></span><br><span class="line"><span class="javascript">            &#123;<span class="attr">name</span>:<span class="string">'a'</span>&#125;,</span></span><br><span class="line"><span class="javascript">            &#123;<span class="attr">name</span>:<span class="string">'b'</span>&#125;,</span></span><br><span class="line"><span class="javascript">            &#123;<span class="attr">name</span>:<span class="string">'c'</span>&#125;</span></span><br><span class="line"><span class="undefined">        ]</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">	methods:&#123;</span></span><br><span class="line"><span class="undefined">		itemClick(item)&#123;</span></span><br><span class="line"><span class="undefined">			item.active = !item.active;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	&#125;,</span></span><br><span class="line"><span class="undefined">	created()&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.list.length;i++)&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">this</span>.list[i].active = <span class="literal">false</span>;                    </span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined">&#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>created里对list对象添加active属性</p>
+<p>点击div触发 itemClick事件 —-&gt;  改变list对象里的active  —–&gt;  添加isActive的class</p>
+<p>然而。。。</p>
+<p>并没有用</p>
+</blockquote>
+</li>
+<li><h3 id="针对以上情况解决"><a href="#针对以上情况解决" class="headerlink" title="针对以上情况解决"></a>针对以上情况解决</h3><ul>
+<li><h4 id="对象里面存在需要添加的属性"><a href="#对象里面存在需要添加的属性" class="headerlink" title="对象里面存在需要添加的属性"></a>对象里面存在需要添加的属性</h4></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    data:&#123;</span><br><span class="line">        list:[</span><br><span class="line">            &#123;<span class="attr">name</span>:<span class="string">'a'</span>,<span class="attr">active</span>:<span class="literal">false</span>&#125;,</span><br><span class="line">            &#123;<span class="attr">name</span>:<span class="string">'b'</span>,<span class="attr">active</span>:<span class="literal">false</span>&#125;,</span><br><span class="line">            &#123;<span class="attr">name</span>:<span class="string">'c'</span>,<span class="attr">active</span>:<span class="literal">false</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">	methods:&#123;</span><br><span class="line">		itemClick(item)&#123;</span><br><span class="line">			item.active = !item.active;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>直接在list对象里添加属性active</p>
+</blockquote>
+<ul>
+<li><h4 id="使用-set"><a href="#使用-set" class="headerlink" title="使用 $set"></a>使用 $set</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj.active = false;</span><br><span class="line">===&gt;</span><br><span class="line">this.$set(obj,&apos;active&apos;,false);</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="造成原因"><a href="#造成原因" class="headerlink" title="造成原因"></a>造成原因</h3><blockquote>
+<p>数据的改变必须能够触发set方法，否则无法响应数据变化</p>
+<p><a href="https://blog.csdn.net/zifeiyu130/article/details/78950244?utm_source=blogxgwz1" style="text-decoration:none;" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="路由使用父组件的属性"><a href="#路由使用父组件的属性" class="headerlink" title="路由使用父组件的属性"></a>路由使用父组件的属性</h2><p>在router-view标签里进行传递</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">router-view</span> <span class="attr">:xxx</span>=<span class="string">"xxx"</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</div>
+
+    </div>
+</div>
+</body>
+</html>

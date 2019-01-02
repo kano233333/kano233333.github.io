@@ -1,0 +1,87 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        网易云音乐
+    </h1>
+    <h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><h2 id="stylus"><a href="#stylus" class="headerlink" title="stylus"></a>stylus</h2><blockquote>
+<p>用.styl一个文件存放变量</p>
+<p>stylus目录下index.styl文件</p>
+<p>将所有要用的.styl文件引入，方便导出</p>
+</blockquote>
+<h2 id="webpack-base-conf-配置"><a href="#webpack-base-conf-配置" class="headerlink" title="webpack.base.conf 配置"></a>webpack.base.conf 配置</h2><h2 id="babel-polyfill"><a href="#babel-polyfill" class="headerlink" title="babel-polyfill"></a>babel-polyfill</h2><h2 id="fastclick"><a href="#fastclick" class="headerlink" title="fastclick"></a>fastclick</h2><blockquote>
+<p>import fastClick from ‘fastclick’</p>
+<p>fastClick.attach(document.body)</p>
+</blockquote>
+<h2 id="router-link-tag"><a href="#router-link-tag" class="headerlink" title="router-link tag"></a>router-link tag</h2><h2 id="数据-jsonp"><a href="#数据-jsonp" class="headerlink" title="数据 jsonp"></a>数据 jsonp</h2><h2 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent()"></a>encodeURIComponent()</h2><h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><h2 id="config-js"><a href="#config-js" class="headerlink" title="config.js"></a>config.js</h2><blockquote>
+<p>控制台</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">export</span> <span class="keyword">const</span> commonParam = &#123;</span><br><span class="line">&gt;   <span class="string">"g_tk"</span>: <span class="string">"1402439120"</span>,</span><br><span class="line">&gt;   <span class="string">"inCharset"</span>: <span class="string">"utf-8"</span>,</span><br><span class="line">&gt;   <span class="string">"outCharset"</span>: <span class="string">"utf-8"</span>,</span><br><span class="line">&gt;   <span class="string">"notice"</span>:<span class="string">"0"</span>,</span><br><span class="line">&gt;   <span class="string">"format"</span>:<span class="string">"json"</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">export</span> <span class="keyword">const</span> options = &#123;</span><br><span class="line">&gt;   <span class="string">"param"</span>:<span class="string">"jsonCallback"</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">export</span> <span class="keyword">const</span> ERR_OK = <span class="number">0</span>;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="recommend-vue"><a href="#recommend-vue" class="headerlink" title="recommend.vue"></a>recommend.vue</h2><blockquote>
+<p>封装 获取recommend json数据的函数getRecommend</p>
+</blockquote>
+<h2 id="slider-vue"><a href="#slider-vue" class="headerlink" title="slider.vue"></a>slider.vue</h2><blockquote>
+<p>轮播组件</p>
+</blockquote>
+<h2 id="better-scroll实现slider"><a href="#better-scroll实现slider" class="headerlink" title="better-scroll实现slider"></a>better-scroll实现slider</h2><h2 id="slider时序问题"><a href="#slider时序问题" class="headerlink" title="slider时序问题"></a>slider时序问题</h2><blockquote>
+<p>通过异步去请求接口</p>
+<p>dom渲染时，就会没有数据，即</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; data()&#123;</span><br><span class="line">&gt;     <span class="keyword">return</span> &#123;</span><br><span class="line">&gt;         recommentData:[]<span class="comment">//还为空</span></span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>渲染不出效果</p>
+<p>解决：(通过v-if进行判断一下)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;div v-if=&quot;recommendData.length&quot; class=&quot;slider-wrapper&quot;&gt;</span><br><span class="line">&gt; 	...</span><br><span class="line">&gt; &lt;/div&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Scroll组件"><a href="#Scroll组件" class="headerlink" title="Scroll组件"></a>Scroll组件</h2><blockquote>
+<p>多个地方需要使用 Bscroll 的滚动效果</p>
+<p>将其作为一个组件抽出来</p>
+</blockquote>
+<h2 id="vue-lazyload"><a href="#vue-lazyload" class="headerlink" title="vue-lazyload"></a>vue-lazyload</h2><blockquote>
+<p>图片加载的插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;import VueLazyLoad from &apos;vue-lazyload&apos;</span><br><span class="line">&gt;Vue.use(VueLazyLoad,&#123;</span><br><span class="line">&gt;    loading:requre(&apos;加载时显示的图片的路径&apos;)</span><br><span class="line">&gt;&#125;)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;img :src=&quot;xxx&quot;&gt;</span><br><span class="line">&gt;=====&gt;&gt;</span><br><span class="line">&gt;&lt;img v-lazy=&quot;xxx&quot;&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="加载组件-loading"><a href="#加载组件-loading" class="headerlink" title="加载组件 loading"></a>加载组件 loading</h2><h2 id="使用keep-alive缓存组件"><a href="#使用keep-alive缓存组件" class="headerlink" title="使用keep-alive缓存组件"></a>使用keep-alive缓存组件</h2>
+</div>
+
+    </div>
+</div>
+</body>
+</html>

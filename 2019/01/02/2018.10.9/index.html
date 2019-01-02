@@ -1,0 +1,101 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        2018.10.9
+    </h1>
+    <h1 id="10-9"><a href="#10-9" class="headerlink" title="10.9"></a>10.9</h1><h2 id="input-range"><a href="#input-range" class="headerlink" title="input range"></a>input range</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li><h4 id="type"><a href="#type" class="headerlink" title="type"></a>type</h4><p>type=’range’</p>
+</li>
+<li><h4 id="max"><a href="#max" class="headerlink" title="max"></a>max</h4><p>滑块 滑到 滑动条 最右端 时的最大值</p>
+</li>
+<li><h4 id="min"><a href="#min" class="headerlink" title="min"></a>min</h4><p>滑块 滑到 滑动条 最左端 时的最小值</p>
+</li>
+<li><h4 id="value"><a href="#value" class="headerlink" title="value"></a>value</h4><p>返回滑块所处的值（根据min max比例分配）</p>
+</li>
+</ul>
+<h3 id="样式美化"><a href="#样式美化" class="headerlink" title="样式美化"></a><a href="https://blog.csdn.net/u013347241/article/details/51560290" target="_blank" rel="noopener">样式美化</a></h3><ul>
+<li><p>去掉系统默认样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='range']</span> &#123;</span><br><span class="line">     <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给滑动<strong>轨道</strong>添加样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='range']</span><span class="selector-pseudo">::webkit-slider-runnable-track</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">/* 此处添加背景颜色是整个轨道 */</span></span><br><span class="line">    (<span class="selector-tag">background-color</span>:<span class="selector-id">#ccc</span>;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给<strong>滑块</strong>添加样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='range']</span><span class="selector-pseudo">::webkit-slider-thumb</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>填充背景</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='range']</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-appearance</span>:none;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#ccc</span>;</span><br><span class="line">    <span class="comment">/* 通过background-size在x方向上的比例来设置背景 */</span></span><br><span class="line">    <span class="attribute">background-size</span>:x% <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="背景同步滑块"><a href="#背景同步滑块" class="headerlink" title="背景同步滑块"></a>背景同步滑块</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> inputRang = <span class="built_in">document</span>.querySelector(<span class="string">'input[type="range"]'</span>);</span><br><span class="line"><span class="comment">//鼠标按下时，添加mousemove事件</span></span><br><span class="line">inputRange.onmousedown = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">this</span>.onmousemove = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//实时更新background-size在x方向上的比例</span></span><br><span class="line">        _this.style.backgroundSize = <span class="string">"_this.value/(_this.max-_this.min)"</span>+<span class="string">"% 100%"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//松开鼠标 null mousemove事件</span></span><br><span class="line">inputRange.onmouseup = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.onmousemove = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="去掉系统默认样式"><a href="#去掉系统默认样式" class="headerlink" title="去掉系统默认样式"></a>去掉系统默认样式</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-appearance</span>: <span class="selector-tag">none</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="伪类与伪元素"><a href="#伪类与伪元素" class="headerlink" title="伪类与伪元素"></a><a href="https://segmentfault.com/a/1190000012156828" target="_blank" rel="noopener">伪类与伪元素</a></h2><ul>
+<li><p>伪类 包含在css选择器里</p>
+</li>
+<li><p>伪元素 是对元素中特定内容进行操作，不存在于文档结构中</p>
+</li>
+</ul>
+<h2 id="js获取伪元素"><a href="#js获取伪元素" class="headerlink" title="js获取伪元素"></a>js获取伪元素</h2><p>获取伪类的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.getComputedStyle(el,<span class="string">":after"</span>);</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/xiaoya_syt/article/details/60577553" target="_blank" rel="noopener">详细</a></p>
+<h2 id="百分比布局细节"><a href="#百分比布局细节" class="headerlink" title="百分比布局细节"></a>百分比布局细节</h2><p>margin与padding的占比基于<strong>父元素</strong>的    <strong>width</strong></p>
+<h2 id="‘false’-转-false"><a href="#‘false’-转-false" class="headerlink" title="‘false’ 转 false"></a><a href="https://blog.csdn.net/wuyou1336/article/details/71076351/" target="_blank" rel="noopener">‘false’ 转 false</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(!<span class="string">'false'</span>);  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<p>‘false’ 是一个字符串</p>
+<p>字符串取反—&gt;false</p>
+<p>解决：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'false'</span>;</span><br><span class="line"><span class="keyword">var</span> fan = str == <span class="string">'false'</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="input-与-伪元素"><a href="#input-与-伪元素" class="headerlink" title="input 与 伪元素"></a>input 与 伪元素</h2><p>作为<a href="https://www.baidu.com/s?wd=DOM&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">DOM</a>元素，伪元素都是在容器内进行渲染的。input无法容纳其他元素，因此它不支持伪元素。</p>
+<p>input  :   \<input>       没有    \</p>
+<h2 id="display-transition"><a href="#display-transition" class="headerlink" title="display transition"></a>display transition</h2><p>transition不支持display</p>
+<p>—&gt;  设置display看不见动画效果</p>
+<p>解决：</p>
+<ul>
+<li><p>visibility</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line">    <span class="attribute">visibility</span>:hidden;</span><br><span class="line">    <span class="attribute">transition</span>:<span class="number">1s</span> all;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#box</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">visibility</span>:show;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>visibility会造成留白，动画的盒子最好是 <strong>position</strong></p>
+</li>
+<li><p>max-height/max-width</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-id">#box2</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">max-height</span><span class="selector-pseudo">:0px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">transition</span><span class="selector-pseudo">:1s</span> <span class="selector-tag">all</span>;</span></span><br><span class="line"><span class="undefined">        ...</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-id">#box1</span><span class="selector-pseudo">:hover</span> <span class="selector-id">#box2</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">max-height</span><span class="selector-pseudo">:300px</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+</div>
+
+    </div>
+</div>
+</body>
+</html>

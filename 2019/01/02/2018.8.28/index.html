@@ -1,0 +1,122 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        2018.8.28
+    </h1>
+    <h1 id="学习周报"><a href="#学习周报" class="headerlink" title="学习周报"></a>学习周报</h1><h2 id="2018-8-28"><a href="#2018-8-28" class="headerlink" title="2018.8.28"></a>2018.8.28</h2><hr>
+<p>这个星期开始了钱包的项目，写了3个项目页面和一次学姐布置的JS作业（实现字符串的查找，替换，重置）。通过项目，学姐的讲解，这个星期学到了很多东西。</p>
+<h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><ul>
+<li>在<strong>css  js</strong>文件中等号两边有空格  </li>
+</ul>
+<p><code>var = document.xxxx;</code>  </p>
+<ul>
+<li>定义变量 使用     <strong>,</strong>    分割更美观</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = xxx,</span><br><span class="line">	b = xxx, </span><br><span class="line">	c = xxx;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>命名要有意义  </p>
+</li>
+<li><p>文件路径最好加上  <strong>./</strong>   之类的  </p>
+</li>
+</ul>
+<h3 id="Mark-Man"><a href="#Mark-Man" class="headerlink" title="Mark Man"></a>Mark Man</h3><p>主要用来测量图片元素的宽高，色值  </p>
+<p>选择宽/高 =&gt; 按住<strong>tab</strong>  可以量出大小</p>
+<p>超级好用👍</p>
+<h3 id="vw-vh"><a href="#vw-vh" class="headerlink" title="vw  vh"></a>vw  vh</h3><ul>
+<li><p>vw : 相对屏幕宽度的单位  100vw是满宽  （元素宽度/总宽度vw）</p>
+</li>
+<li><p>vh  : 相对屏幕高度的单位  100vh是满高  （元素高度/总高度vh）  </p>
+</li>
+</ul>
+<p>在<strong>移动端</strong> 很好用</p>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>less是一门css预处理语言  方便计算</p>
+<p>基本用法：</p>
+<ul>
+<li>使用变量</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@total:</span>xxx;   </span><br><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line">    <span class="attribute">xxx </span>: <span class="variable">@total</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用函数</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.size</span>(<span class="variable">@width</span>,<span class="variable">@height</span>)&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@width</span>/<span class="variable">@total</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="variable">@height</span>/<span class="variable">@total</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line">    <span class="selector-class">.size</span>(<span class="number">123</span>,<span class="number">123</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>计算</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">342</span>/<span class="number">233</span>*<span class="number">34</span>-<span class="number">12</span>+<span class="number">23px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>嵌套</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="selector-class">.box1</span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://segmentfault.com/a/1190000012360995#articleHeader8" target="_blank" rel="noopener">less详情</a></p>
+<h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><ul>
+<li><p>border 实现三角形</p>
+<p>原理关键：每个方向的border都是 <strong>三角形</strong>   <em>不是长方形</em>  。通过控制每一边的透明度就可以实现。</p>
+<p>eg:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">30px</span> <span class="number">30px</span> <span class="number">30px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: transparent <span class="number">#333</span> transparent transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.cnblogs.com/youhong/p/6530575.html" target="_blank" rel="noopener">原理详细</a></p>
+<p><a href="https://www.cnblogs.com/blosaa/p/3823695.html" target="_blank" rel="noopener">更多例子</a></p>
+</li>
+</ul>
+<ul>
+<li><p>字符串的搜索，替换</p>
+<p><strong>split() + join()</strong></p>
+<p>split() 将数组分割为字符串</p>
+<p>join(‘xx’) 将数组连接为字符串，并可以在两个数组元素间插入传入的第一个参数  </p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://www.daqianduan.com/3737.html" target="_blank" rel="noopener">:nth-child 选择器</a></p>
+</li>
+<li><p>let </p>
+<p>兼容性不好，用闭包代替</p>
+<p>eg:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i&lt;xxx ; i++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">        xxx.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解决键盘点击收起问题</p>
+<p>在最外层父级元素container</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">container.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    keyboard.style.display=<span class="string">'none'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>指定点击的对应的input和键盘时，键盘不收起，<strong>禁止冒泡</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">input.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    keyboard.style.display=<span class="string">'block'</span>;</span><br><span class="line">    event.stopPropagetion();</span><br><span class="line">&#125;</span><br><span class="line">keyboard.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    keyboard.style.display=<span class="string">'block'</span>;</span><br><span class="line">    event.stopPropagetion();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+</div>
+
+    </div>
+</div>
+</body>
+</html>

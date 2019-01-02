@@ -1,0 +1,79 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        es6
+    </h1>
+    <h2 id="…-（三点运算符）"><a href="#…-（三点运算符）" class="headerlink" title="…   （三点运算符）"></a>…   （三点运算符）</h2><p>将 <strong>数组</strong>||<strong>对象</strong>    展开成为一系列用 , 隔开的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">0</span>],arr[<span class="number">1</span>],arr[<span class="number">2</span>]); <span class="comment">//a b c</span></span><br><span class="line"><span class="built_in">console</span>.log(...arr); <span class="comment">//a b c</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="为数组添加元素"><a href="#为数组添加元素" class="headerlink" title="为数组添加元素"></a>为数组添加元素</h4></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="string">'a'</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="string">'b'</span>];</span><br><span class="line"><span class="keyword">let</span> arr3 = [...arr1，...arr2,<span class="string">'c'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr3);  <span class="comment">// ['a','b','c']</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="在-vue-中的使用"><a href="#在-vue-中的使用" class="headerlink" title="在 vue 中的使用"></a>在 vue 中的使用</h4></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//router.js</span></span><br><span class="line">routes:[</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">'/'</span>,</span><br><span class="line">        redirect:<span class="string">'/index'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    ...page  <span class="comment">//将接收的数组，添加到routes数组里</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// page/router.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> [  <span class="comment">//导出的是一个数组</span></span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">'/page'</span>,</span><br><span class="line">        name:<span class="string">'page'</span>,</span><br><span class="line">        component:page</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="与解构结合"><a href="#与解构结合" class="headerlink" title="与解构结合"></a>与<strong>解构</strong>结合</h4></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [str,...arr] = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(str);  <span class="comment">// 'a'</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">// ['b','c','d']</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="将字符串转换为数组"><a href="#将字符串转换为数组" class="headerlink" title="将字符串转换为数组"></a>将字符串转换为数组</h4></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [...<span class="string">'abc'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">//['a','b','c']</span></span><br></pre></td></tr></table></figure>
+<h2 id="rest-参数"><a href="#rest-参数" class="headerlink" title="rest 参数"></a>rest 参数</h2><p>(…xxx)</p>
+<p>将参数放进数组中，可以替代 arguments</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">xxx</span>(<span class="params">str,...value</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(str);</span><br><span class="line">    <span class="built_in">console</span>.log(value)；</span><br><span class="line">&#125;</span><br><span class="line">xxx(<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>);</span><br><span class="line"><span class="comment">// 'a'</span></span><br><span class="line"><span class="comment">// ['b','c','d']</span></span><br></pre></td></tr></table></figure>
+<p><strong>rest参数之后，不能再有其他参数</strong></p>
+<h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><ul>
+<li><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><blockquote>
+<p>Promise中的参数<code>executor</code>是一个执行器函数，它有两个参数<code>resolve</code>和<code>reject</code></p>
+<p>异步操作成功，则可以调用resolve()来将该实例的状态置为<code>fulfilled</code></p>
+<p>失败，可以调用reject()来将该实例的状态置为<code>rejected</code></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pro = <span class="keyword">new</span> promise(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">    resolve(<span class="string">'sucess'</span>);</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3></li>
+</ul>
+
+</div>
+
+    </div>
+</div>
+</body>
+</html>

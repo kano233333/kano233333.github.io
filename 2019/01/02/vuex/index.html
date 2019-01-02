@@ -1,0 +1,58 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        vuex
+    </h1>
+    <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>npm install vuex –save</p>
+</blockquote>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><blockquote>
+<p>可以像使用router一样</p>
+<p>src目录下新建一个store目录  再新建 index.js 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//  src/store/index.js</span></span><br><span class="line">&gt; <span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line">&gt; <span class="keyword">import</span> vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; Vue.use(vuex)</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">export</span> defalut <span class="keyword">new</span> vuex.Store(&#123;&#125;)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>将store挂在组件上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">// main.js</span></span><br><span class="line">&gt; <span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">&gt;     ...</span><br><span class="line">&gt;     store,</span><br><span class="line">&gt;     ...</span><br><span class="line">&gt; &#125;)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="state"><a href="#state" class="headerlink" title="state"></a>state</h2>
+</div>
+
+    </div>
+</div>
+</body>
+</html>

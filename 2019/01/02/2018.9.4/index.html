@@ -1,0 +1,143 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/archives">Archives</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1>
+        2018.9.4
+    </h1>
+    <h1 id="学习周报"><a href="#学习周报" class="headerlink" title="学习周报"></a>学习周报</h1><h2 id="2018-9-4"><a href="#2018-9-4" class="headerlink" title="2018.9.4"></a>2018.9.4</h2><hr>
+<p>这周完善了钱包转账页面。学了点正则，发现真的超级好用，太方便了:cowboy_hat_face:。写了chongqing-daily的几个页面，由于页面要求，学了点echarts和echarts-gl，那个东西太炫酷了:eight_pointed_black_star:,感觉像发现了新大陆一样。</p>
+<h2 id="正则基本语法"><a href="#正则基本语法" class="headerlink" title="正则基本语法"></a>正则基本语法</h2><h4 id=""><a href="#" class="headerlink" title="^   $"></a>^   $</h4><blockquote>
+<p>^  :  起始位置</p>
+<p>$  :  末尾位置</p>
+<p><strong>eg:</strong></p>
+<p>/^abc/  匹配开始字符为abc</p>
+<p>/abc$/  匹配结束位置为abc</p>
+</blockquote>
+<h4 id="？"><a href="#？" class="headerlink" title="*  +  ？  {}"></a>*  +  ？  {}</h4><blockquote>
+<p>*  :  &gt;=0</p>
+<p>+  :  &gt;=1</p>
+<p>?  :  0或1</p>
+<p>{}  :  指定匹配的次数</p>
+<p><strong>eg:</strong></p>
+<p>/ab*/  a后跟大于等于零个b   (abbbb)</p>
+<p>/(ab)*/       (ababab)</p>
+<p>/a?b+c*/  零个或一个a  + &gt;=1个 +  &gt;=0个c   (abbbbccc , abbbb)</p>
+<p>*   ===&gt;   {0,}</p>
+<p>+   ===&gt;   {1,}</p>
+<p>?    ===&gt;   {0,1}</p>
+<p>{n}   :  正好出现n次</p>
+<p>{n,m}  :  出现n到m次</p>
+<p>{n,}  :  最少出现n次</p>
+</blockquote>
+<h4 id="-1"><a href="#-1" class="headerlink" title="|    []"></a>|    []</h4><blockquote>
+<p>|  :  或</p>
+<p>[]  :  某些字符允许在一个字符串中的某一特定位置出现(方括号中，<strong>不需要转义字符</strong>)</p>
+<p><strong>eg:</strong></p>
+<p>/[ab]/   ===&gt;   /a|b/</p>
+<p>/[^ab]/    ===&gt;  没有a | b    (<strong>方括号中的^ 表示非</strong>)</p>
+</blockquote>
+<h4 id="-2"><a href="#-2" class="headerlink" title="."></a>.</h4><blockquote>
+<p>. : 任意字符</p>
+</blockquote>
+<h4 id="例子详情"><a href="#例子详情" class="headerlink" title="例子详情"></a><a href="https://www.cnblogs.com/ldq2016/p/5528177.html" target="_blank" rel="noopener">例子详情</a></h4><h2 id="JS正则"><a href="#JS正则" class="headerlink" title="JS正则"></a>JS正则</h2><h4 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h4><ul>
+<li><p>g : 全局匹配</p>
+</li>
+<li><p>i : 忽略大小写匹配</p>
+</li>
+<li>m : 多行搜索</li>
+</ul>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li>通过对象定义</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'abc'</span>,<span class="string">'gi'</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>字面量定义</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/abc/gi</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="test"><a href="#test" class="headerlink" title="test()"></a>test()</h4><p>reg.test(str);</p>
+<p>成功 : return true;</p>
+<p>失败: return false; </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/abc/</span>;</span><br><span class="line">reg.test(<span class="string">'abcdefg'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h4><p>str.search(reg);</p>
+<p>找到 : 返回<strong>第一次</strong>匹配的位置(index)</p>
+<p>未找到：返回  <strong>-1</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/abc/g</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abcsjk abcksl"</span>;</span><br><span class="line">str.search(reg);  <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<h4 id="replace"><a href="#replace" class="headerlink" title="replace()"></a>replace()</h4><p>替换</p>
+<p>str.replace(reg,’xxx’);</p>
+<p>返回替换字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/abc/</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="regexp">/abckld/</span>;</span><br><span class="line">str.replace(reg,<span class="string">'111'</span>);   <span class="comment">// '111kld'</span></span><br></pre></td></tr></table></figure>
+<h4 id="split"><a href="#split" class="headerlink" title="split()"></a>split()</h4><p>截取</p>
+<p>str.split(reg);</p>
+<p>返回截取后的数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"how|old*are     you"</span>;</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\||\*|\s+/</span>;   <span class="comment">// | 或 * 或 空格  </span></span><br><span class="line"><span class="keyword">var</span> arr = str.split(reg);</span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">//['how','old','are','you']</span></span><br></pre></td></tr></table></figure>
+<h4 id="exec"><a href="#exec" class="headerlink" title="exec()"></a>exec()</h4><p>该方法属于一个比较复杂的方法，它接受一个字符串，返回的是一个数组，数组中第0个元素是匹配的子字符串，第二个元素是正则中的第一个子分组匹配的结果（如果有子分组，即正则中存在用圆括号括起来的分组），第三个是正则中第二个子分组匹配的结果（如果有第二个子分组）…以此类推，如果没有正则子分组，那么该数组长度仅仅为1，就是匹配到的那个子字符串。同时，返回的这个数组同时还是一个对象，它拥有两个属性，分别为index表示当前匹配到的子字符串所处的位置，input属性表示被匹配的原始字符串。最后，该方法中的正则对象如果不是全局匹配，即没有g修饰符，则每次调用只会从字符串开头处匹配第一个结果，且每次调用结果都是一样的。只有指定为全局匹配，才能够按照从左往右依次去匹配，每次调用匹配一个结果，正则对象的lastIndex属性前进到本次匹配的末尾位置，下回再调用的时候，会从lastIndex处开始匹配而不是从头匹配。</p>
+<h4 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h4><p>该方法接受一个正则作为参数，用来匹配一个字符串，它的输出结果在不是全局匹配的情况下和exec方法的结果一致即一个数组并带有额外的属性，如果采用全局匹配，则不返回任何和其被匹配字符串相关的信息，只返回匹配的结果。</p>
+<h4 id="更多详情"><a href="#更多详情" class="headerlink" title="更多详情"></a><a href="https://www.cnblogs.com/chenmeng0818/p/6370819.html" target="_blank" rel="noopener">更多详情</a></h4><h2 id="echarts基础"><a href="#echarts基础" class="headerlink" title="echarts基础"></a>echarts基础</h2><p><img src="http://echarts.baidu.com/echarts2/doc/asset/img/architecture.png" alt=""></p>
+<p>非常炫酷</p>
+<p>看着官网配置直接上</p>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h4 id="可以使用冒泡，使子元素触发事件"><a href="#可以使用冒泡，使子元素触发事件" class="headerlink" title="可以使用冒泡，使子元素触发事件"></a>可以使用冒泡，使子元素触发事件</h4><p>现象： </p>
+<p>通过使用for循环+闭包使原有的子节点拥有了onclick事件，动态添加了多个子节点，就不具备onclick事件，又要重新获取子节点进行绑定事件  【不方便】</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"box1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span>1111111111<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span>22222222222222222<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span>333333333<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ulBox = <span class="built_in">document</span>.getElementById(<span class="string">'box1'</span>);</span><br><span class="line"><span class="keyword">var</span> liBox;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'#box button'</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    liBox = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</span><br><span class="line">    liBox.innerHTML = <span class="string">'&lt;a href="#" class="box2"&gt;adddd&lt;/a&gt;'</span>;</span><br><span class="line">    ulBox.appendChild(liBox);</span><br><span class="line">    aBox = <span class="built_in">document</span>.querySelectorAll(<span class="string">'#box1 li a'</span>);  <span class="comment">//需要重新获取节点</span></span><br><span class="line">    addAlert();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> aBox = <span class="built_in">document</span>.querySelectorAll(<span class="string">'#box1 li a'</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addAlert</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;aBox.length;i++)&#123;</span><br><span class="line">        (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">            aBox(i).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                alert(<span class="string">'hahaha'</span>);</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;)(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">addAlert();</span><br></pre></td></tr></table></figure>
+<p>优化 : </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ulBox = <span class="built_in">document</span>.getElementById(<span class="string">'box1'</span>);</span><br><span class="line">ul.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;  <span class="comment">//在父元素上添加onclick事件</span></span><br><span class="line">    <span class="keyword">if</span>(event.target.className == <span class="string">"box2"</span>)&#123;  <span class="comment">//通过匹配target.className来确定点击的目标节点</span></span><br><span class="line">        alert(<span class="string">'hahaha'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="attachEvent"><a href="#attachEvent" class="headerlink" title="attachEvent()"></a><a href="https://www.cnblogs.com/dacuotecuo/p/3510823.html" target="_blank" rel="noopener">attachEvent()</a></h4><p>ie8及以下不支持 addEventListener()</p>
+<p>用attachEvent()代替    </p>
+<p>attachEvent(eventName,callback)</p>
+<p><strong>先执行callback  后绑定事件</strong></p>
+<h4 id="隐藏滚轮"><a href="#隐藏滚轮" class="headerlink" title="隐藏滚轮"></a>隐藏滚轮</h4><p>某一块div可以实现滚动，滚动条被隐藏</p>
+<p>实现：</p>
+<p>在外面加一个盒子 设置 overflow:hidden </p>
+<p>有滚动条的盒子 设置 padding-left: （滚动条的长度）  把滚动条挤出去</p>
+<h4 id="margin（遗）"><a href="#margin（遗）" class="headerlink" title="margin（遗）"></a>margin（遗）</h4><p>问题：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"son"</span> <span class="attr">style</span>=<span class="string">"margin-top:200px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>子盒子里设置的 margin-top 改变的是父盒子的margin-top</p>
+<p>产生原因：</p>
+<p>所有毗邻的两个或更多盒元素的margin将会合并为一个margin共享之。毗邻的定义为：同级或者嵌套的盒元素，并且它们之间没有<strong>非空内容</strong>、<strong>Padding</strong>或<strong>Border</strong>分隔。</p>
+<p><a href="https://blog.csdn.net/man_tutu/article/details/62224844" target="_blank" rel="noopener">解决</a>：</p>
+<p>1、修改父元素的高度，增加padding-top样式模拟（padding-top：1px；常用）  </p>
+<p>2、为父元素添加overflow：hidden；样式即可（完美）  </p>
+<p>3、为父元素或者子元素声明浮动（float：left；可用）  </p>
+<p>4、为父元素添加border（border:1px solid transparent可用）  </p>
+<p>5、为父元素或者子元素声明绝对定位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</div>
+
+    </div>
+</div>
+</body>
+</html>
