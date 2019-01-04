@@ -1,10 +1,11 @@
 /*在小于768像素的屏幕*/
 @media (max-width: 767px) {
-  #head_nav {
-    height:0;
+  .container_left {
+    width:0;
+    overflow: hidden;
   }
-  #footer {
-    height:0;
+  .container_right {
+    padding-left:0;
   }
 }
 /*在768和991像素之间的屏幕*/

@@ -7,8 +7,10 @@ pre {
   background-color: #f4f4f4;
   border:1px solid #e8e8e8
 }
-.post_container h1,h2,h3,h4,h5 {
+#post_container h1,#post_container h2,#post_container h3,#post_container h4,#post_container h5,hr {
   margin:20px 0;
+  position:relative;
+  left:-30px;
 }
 blockquote {
   border-left:5px solid #d0d0d0;
