@@ -1,5 +1,7 @@
-# hexo自定义themes
-
+---
+title: hexo自定义themes
+tags:
+---
 ## 初
 
 >themes目录下新建一个文件夹（kano）
