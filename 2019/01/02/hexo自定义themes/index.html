@@ -59,7 +59,61 @@
 </blockquote>
 <p>_config.yml</p>
 </blockquote>
-<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h2 id="引入js-css"><a href="#引入js-css" class="headerlink" title="引入js,css"></a>引入js,css</h2><blockquote>
+<h2 id="主题模块渲染核心"><a href="#主题模块渲染核心" class="headerlink" title="主题模块渲染核心"></a>主题模块渲染核心</h2><ul>
+<li><h3 id="模块继承"><a href="#模块继承" class="headerlink" title="模块继承"></a>模块继承</h3><blockquote>
+<p>layout里的模块，默认继承layout模块</p>
+<p>即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">&gt; layout:layout</span><br><span class="line">&gt; ---</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>指定模块继承xxx模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">&gt; layout:xxx</span><br><span class="line">&gt; ---</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><h3 id="入口index-ejs"><a href="#入口index-ejs" class="headerlink" title="入口index.ejs"></a>入口index.ejs</h3><blockquote>
+<p>默认继承layout模块</p>
+<ul>
+<li>主要用来遍历post文章</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;% page.posts.each(function(post)&#123; %&gt;</span><br><span class="line">&gt;post是source/_post目录下的md文章</span><br><span class="line">&gt;&lt;% &#125;) %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<ul>
+<li>跳转链接</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;%- url_for(post.path) %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<ul>
+<li>文章摘要</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;%- post.excerpt %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>在md里要用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;!-- more --&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>来标记</p>
+</blockquote>
+</li>
+<li><h3 id="layout-ejs-模块"><a href="#layout-ejs-模块" class="headerlink" title="layout.ejs 模块"></a>layout.ejs 模块</h3><blockquote>
+<p>html的主要结构</p>
+<p>head body分块</p>
+<p>展示index.ejs里的东西</p>
+<p>要用</p>
+<p><strong>&lt;%- body %&gt;</strong></p>
+<p><del>我还不晓得为啥子</del></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>页面主体框架，搭在里面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">&gt;     <span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;     <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+</blockquote>
+<h2 id="引入js-css"><a href="#引入js-css" class="headerlink" title="引入js,css"></a>引入js,css</h2><blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;%- css(&apos;css/main.css&apos;,...) %&gt;</span><br><span class="line">&gt; 默认会去source目录下面找，只需要填入main.css文件在source目录下的位置</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <h2 id="hexo与github关联"><a href="#hexo与github关联" class="headerlink" title="hexo与github关联"></a>hexo与github关联</h2><blockquote>
