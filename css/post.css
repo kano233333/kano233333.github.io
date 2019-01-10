@@ -4,7 +4,7 @@
 pre {
   box-sizing: border-box;
   padding:20px;
-  background-color: #f4f4f4;
+  background-color: rgba(249,255,232,0.6);
   border:1px solid #e8e8e8
 }
 #post_container h1,#post_container h2,#post_container h3,#post_container h4,#post_container h5,hr {
