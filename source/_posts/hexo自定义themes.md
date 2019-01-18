@@ -160,6 +160,14 @@ tags:
 >
 >
 
+## 侧边目录
+
+> `````````ejs
+> //post.ejs
+> <%- toc(page.content) %>
+> `````````
+>
+>
 
 ## hexo与github关联
 
