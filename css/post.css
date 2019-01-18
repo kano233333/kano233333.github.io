@@ -4,13 +4,20 @@
 pre {
   box-sizing: border-box;
   padding:20px;
-  background-color: rgba(249,255,232,0.6);
-  border:1px solid #e8e8e8
+  background-color: #000;
+  border:1px solid #e8e8e8;
+  color:#fff;
+  border-radius:5px;
+}
+figure table {
+  display: block;
+  max-width:100%;
+  overflow-x: scroll;
 }
 #post_container h1,#post_container h2,#post_container h3,#post_container h4,#post_container h5,hr {
   margin:20px 0;
   position:relative;
-  left:-30px;
+  left:-2%;
 }
 blockquote {
   border-left:5px solid #d0d0d0;
@@ -18,10 +25,10 @@ blockquote {
   box-sizing: border-box;
 }
 .keyword {
-  color: #00059c;
+  color: #96aaff;
 }
 .built_in {
-  color: #cd8700
+  color: #e98d63;
 }
 .post_container li {
   list-style-type: circle;
@@ -30,18 +37,22 @@ blockquote {
   text-decoration: underline;
 }
 .string {
-  color:#aa7254
+  color: #e98d63;
 }
 .variable {
   color:cadetblue;
   font-weight:700;
 }
 .selector-class,.selector-id {
-  color: #4a9500;
+  color: #38da52;
 }
 .attribute {
   color:chocolate;
 }
 figure table {
   width:100%;
+}
+
+.toc-child {
+  margin-left:20px;
 }

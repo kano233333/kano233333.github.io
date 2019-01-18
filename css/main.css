@@ -113,12 +113,25 @@ li{list-style:none;}
 }
 /*----------------post------------------*/
 #post_container {
-  padding-bottom:100px;
+  padding:2% 5% 5% 5%;
   width:80%;
   margin:30px auto;
+  background-color: #fff;
   animation:0.8s upEnter forwards;
 }
 /*.post_title {}*/
+#post_toc {
+  max-width:200px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  border:1px solid cadetblue;
+  padding:10px;
+  position:fixed;
+  right:0;
+  top:25vh;
+}
+
 
 
 /*-------------paginator -------------*/
