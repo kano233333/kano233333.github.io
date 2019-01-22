@@ -56,3 +56,26 @@ figure table {
 .toc-child {
   margin-left:20px;
 }
+.toc {
+  width:0;
+  height:0;
+}
+
+.toc-item{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.toc-text{
+  color: #d4d4d4;
+  transition:all 0.3s;
+}
+.toc .toc-child {
+  font-size:12px;
+}
+.toc-text:hover {
+  color: #fff;
+}
+.toc-number {
+  color:#fff;
+}

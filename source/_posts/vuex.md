@@ -2,6 +2,7 @@
 title: vuex
 tags:
 ---
+
 ## 安装
 
 > npm install vuex --save

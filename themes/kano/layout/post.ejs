@@ -7,11 +7,10 @@ layout: layout
     </h1>
     <hr />
     <%- page.content %>
-    <div id="post_toc">
-    <%- toc(page.content,{list_number: false}) %>
-    </div>
 </div>
+<%- partial('_partial/toc',{page:page}) %>
 
 <script>
   cleanJIAO();
+  // tocShow();
 </script>

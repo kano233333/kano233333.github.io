@@ -3,7 +3,6 @@ title: vue问题
 tags:
 ---
 
-<!-- more -->
 ## Array  Object  更新后，DOM不能实时渲染
 
 - ### 现象
