@@ -41,7 +41,7 @@
     <div class="container_right">
     <div id="post_container">
     <h1 class="post_title">
-        hexo自定义themes
+        hexo自定义theme
     </h1>
     <hr>
     <h2 id="初"><a href="#初" class="headerlink" title="初"></a>初</h2><blockquote>
@@ -64,81 +64,8 @@
 </blockquote>
 <p>_config.yml</p>
 </blockquote>
-<h2 id="主题模块渲染核心"><a href="#主题模块渲染核心" class="headerlink" title="主题模块渲染核心"></a>主题模块渲染核心</h2><ul>
-<li><h3 id="模块继承"><a href="#模块继承" class="headerlink" title="模块继承"></a>模块继承</h3><blockquote>
-<p>layout里的模块，默认继承layout模块</p>
-<p>即：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">&gt; layout:layout</span><br><span class="line">&gt; ---</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>指定模块继承xxx模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">&gt; layout:xxx</span><br><span class="line">&gt; ---</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><h3 id="入口index-ejs"><a href="#入口index-ejs" class="headerlink" title="入口index.ejs"></a>入口index.ejs</h3><blockquote>
-<p>默认继承layout模块</p>
-<ul>
-<li>主要用来遍历post文章</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;% page.posts.each(function(post)&#123; %&gt;</span><br><span class="line">&gt;post是source/_post目录下的md文章</span><br><span class="line">&gt;&lt;% &#125;) %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<ul>
-<li>跳转链接</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;%- url_for(post.path) %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<ul>
-<li>文章摘要</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;%- post.excerpt %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>在md里要用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;!-- more --&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>来标记</p>
-</blockquote>
-</li>
-<li><h3 id="layout-ejs-模块"><a href="#layout-ejs-模块" class="headerlink" title="layout.ejs 模块"></a>layout.ejs 模块</h3><blockquote>
-<p>html的主要结构</p>
-<p>head body分块</p>
-<p>展示index.ejs里的东西</p>
-<p>要用</p>
-<p><strong>&lt;%- body %&gt;</strong></p>
-<p><del>我还不晓得为啥子</del></p>
-</blockquote>
-</li>
-<li><h3 id="文章详情post-ejs模块"><a href="#文章详情post-ejs模块" class="headerlink" title="文章详情post.ejs模块"></a>文章详情post.ejs模块</h3><blockquote>
-<p>page参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;div id=&quot;post_container&quot;&gt;</span><br><span class="line">&gt;     &lt;h1 class=&quot;post_title&quot;&gt;</span><br><span class="line">&gt;         &lt;%= page.title %&gt;</span><br><span class="line">&gt;     &lt;/h1&gt;</span><br><span class="line">&gt;     &lt;hr /&gt;</span><br><span class="line">&gt;     &lt;%- page.content %&gt;</span><br><span class="line">&gt; &lt;/div&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><h3 id="归档页archive-ejs"><a href="#归档页archive-ejs" class="headerlink" title="归档页archive.ejs"></a>归档页archive.ejs</h3><blockquote>
-<p>遍历post文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;div id=&quot;archive_container&quot;&gt;</span><br><span class="line">&gt;     &lt;% page.posts.each(function (post) &#123; %&gt;</span><br><span class="line">&gt;     &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;</span><br><span class="line">&gt;         &lt;div class=&quot;post_list&quot;&gt;</span><br><span class="line">&gt;             &lt;p class=&quot;title&quot;&gt;&lt;%= post.title %&gt;&lt;/p&gt;</span><br><span class="line">&gt;         &lt;/div&gt;</span><br><span class="line">&gt;     &lt;/a&gt;</span><br><span class="line">&gt;     &lt;% &#125;) %&gt;</span><br><span class="line">&gt; &lt;/div&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h2 id="引入js-css"><a href="#引入js-css" class="headerlink" title="引入js,css"></a>引入js,css</h2><blockquote>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h2 id="引入js-css"><a href="#引入js-css" class="headerlink" title="引入js,css"></a>引入js,css</h2><blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;%- css(&apos;css/main.css&apos;,...) %&gt;</span><br><span class="line">&gt; 默认会去source目录下面找，只需要填入main.css文件在source目录下的位置</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h2 id="使用主题里的-config-yml"><a href="#使用主题里的-config-yml" class="headerlink" title="使用主题里的_config.yml"></a>使用主题里的_config.yml</h2><blockquote>
-<p>相当于定义全局变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;menu:</span><br><span class="line">&gt;  Home: /</span><br><span class="line">&gt;  Archives: /archives</span><br><span class="line">&gt;  Github: https://github.com/kano233333</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>使用（相当于绑在theme对象上的属性，使用方式和js一样）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&lt;ul class=&quot;nav_ul&quot;&gt;</span><br><span class="line">&gt;            &lt;% for(menu in theme.menu) &#123; %&gt;</span><br><span class="line">&gt;            &lt;li class=&quot;nav_list&quot;&gt;</span><br><span class="line">&gt;                &lt;a class=&quot;nav_link&quot; href=&quot;&lt;%- url_for(theme.menu[menu]) %&gt;&quot;&gt;&lt;%= menu %&gt;&lt;/a&gt;</span><br><span class="line">&gt;            &lt;/li&gt;</span><br><span class="line">&gt;            &lt;% &#125; %&gt;</span><br><span class="line">&gt;        &lt;/ul&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-</blockquote>
-<h2 id="侧边目录"><a href="#侧边目录" class="headerlink" title="侧边目录"></a>侧边目录</h2><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; //post.ejs</span><br><span class="line">&gt; &lt;%- toc(page.content) %&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
 </blockquote>
 <h2 id="hexo与github关联"><a href="#hexo与github关联" class="headerlink" title="hexo与github关联"></a>hexo与github关联</h2><blockquote>
 <p>//_config.yml</p>
@@ -161,13 +88,14 @@
 </blockquote>
 </blockquote>
 
-    <div id="post_toc">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初"><span class="toc-text">初</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构"><span class="toc-text">结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题模块渲染核心"><span class="toc-text">主题模块渲染核心</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模块继承"><span class="toc-text">模块继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#入口index-ejs"><span class="toc-text">入口index.ejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#layout-ejs-模块"><span class="toc-text">layout.ejs 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章详情post-ejs模块"><span class="toc-text">文章详情post.ejs模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#归档页archive-ejs"><span class="toc-text">归档页archive.ejs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引入js-css"><span class="toc-text">引入js,css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用主题里的-config-yml"><span class="toc-text">使用主题里的_config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#侧边目录"><span class="toc-text">侧边目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo与github关联"><span class="toc-text">hexo与github关联</span></a></li></ol>
-    </div>
+</div>
+<div id="post_toc" class="post_toc1">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初"><span class="toc-number">1.</span> <span class="toc-text">初</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构"><span class="toc-number">2.</span> <span class="toc-text">结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块"><span class="toc-number">3.</span> <span class="toc-text">模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引入js-css"><span class="toc-number">4.</span> <span class="toc-text">引入js,css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo与github关联"><span class="toc-number">5.</span> <span class="toc-text">hexo与github关联</span></a></li></ol>
 </div>
 
 <script>
   cleanJIAO();
+  // tocShow();
 </script>
 
     </div>
