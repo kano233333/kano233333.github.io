@@ -24,3 +24,25 @@
     transform: rotate(0deg) scale(1) ;
   }
 }
+
+@keyframes leftEnter {
+  0% {
+    transform:translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform:translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightEnter {
+  0% {
+    transform:translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform:translateX(0);
+    opacity: 1;
+  }
+}
