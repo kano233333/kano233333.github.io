@@ -28,7 +28,31 @@
 }
 /*在768和991像素之间的屏幕*/
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .container_left {
+    width:0;
+    overflow: hidden;
+  }
+  .container_right {
+    padding-left:0;
+  }
+  .post_list {
+    height:100px;
+    min-width: 250px;
+  }
+  .page-nav {
+    margin-left:0;
+  }
+  #index_container {
+    margin:0 auto;
+  }
+  #all_tags {
+    position:fixed;
+    right:0;
+    top:0;
+    max-width:100px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 /*在992和1199像素之间的屏幕*/
 @media (min-width: 992px) and (max-width: 1199px) {

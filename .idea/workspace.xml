@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96a7228c-2bc7-4f75-9719-3c47b0459ee8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/themes/kano/layout/_partial/all_tags.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/kano/layout/_partial/show_list.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/kano/source/css/img/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.10.16.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.10.16.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.10.2.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.10.2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.10.23.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.10.23.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.10.9.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.10.9.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.8.28.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.8.28.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.9.11.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.9.11.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.9.18.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.9.18.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.9.25.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.9.25.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2018.9.4.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/2018.9.4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/canvas_act.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/canvas_act.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/es6.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/es6.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/express.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/express.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/hexo自定义themes.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/hexo自定义themes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/mysql.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/vue  外卖app.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/vue  外卖app.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/vue-init.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/vue-init.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/vuex.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/vuex.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/vue问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/vue问题.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/网易云音乐.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/网易云音乐.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/layout/_partial/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/layout/_partial/head.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/layout/_partial/toc.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/layout/_partial/toc.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/layout/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/layout/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/layout/tags.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/layout/tags.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/source/css/animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/css/animation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/source/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/source/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/css/media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/source/css/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/css/post.css" afterDir="false" />
-    </list>
+    <list default="true" id="96a7228c-2bc7-4f75-9719-3c47b0459ee8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/themes/kano/source/css/animation.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
-              <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -356,13 +323,13 @@
     <property name="settings.editor.selected.configurable" value="configurable.stylesheets" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\layout" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\source\css\img" />
       <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\source\_posts" />
       <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\source\css\font" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -410,12 +377,12 @@
       <workItem from="1548167674666" duration="5851000" />
       <workItem from="1548347003627" duration="518000" />
       <workItem from="1548396723617" duration="2171000" />
-      <workItem from="1548400278184" duration="9897000" />
+      <workItem from="1548400278184" duration="10232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83846000" />
+    <option name="totallyTimeSpent" value="84181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,7 +395,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="SvgViewer" order="3" show_stripe_button="false" side_tool="true" />
@@ -827,7 +793,7 @@
     <entry file="file://$PROJECT_DIR$/themes/kano/source/css/animation.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
         </state>
       </provider>
     </entry>
