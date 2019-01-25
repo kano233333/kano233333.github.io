@@ -1,6 +1,7 @@
 ---
 title: canvas_act
-tags:
+tags: 
+  - canvas
 ---
 
 ## polygon

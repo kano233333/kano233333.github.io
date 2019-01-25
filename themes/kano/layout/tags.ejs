@@ -1,0 +1,17 @@
+<!-- Main Content -->
+<div id="tags_container">
+    <% site.tags.map(function(tag){  %>
+    <div class="tags_wrapper">
+        <div class="tags_title">
+            <h2 id="<%- tag.name %>"><%- tag.name %></h2>
+        </div>
+        <div class="tags_list">
+            <%- partial('./_partial/show_list',{page:tag}) %>
+        </div>
+    </div>
+    <% }) %>
+    <div id="all_tags">
+    <%- partial('./_partial/all_tags') %>
+    </div>
+</div>
+

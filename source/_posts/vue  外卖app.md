@@ -1,6 +1,7 @@
 ---
 title: vue  外卖app
 tags:
+  - vue
 ---
 
 ## 创建项目

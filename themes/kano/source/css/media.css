@@ -9,12 +9,21 @@
   }
   .post_list {
     height:100px;
+    min-width: 250px;
   }
   .page-nav {
     margin-left:0;
   }
   #index_container {
     margin:0 auto;
+  }
+  #all_tags {
+    position:fixed;
+    right:0;
+    top:0;
+    max-width:100px;
+    display: flex;
+    flex-direction: column;
   }
 }
 /*在768和991像素之间的屏幕*/

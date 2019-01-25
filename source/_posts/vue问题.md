@@ -1,6 +1,7 @@
 ---
 title: vue问题
-tags:
+tags: 
+  - vue
 ---
 
 ## Array  Object  更新后，DOM不能实时渲染

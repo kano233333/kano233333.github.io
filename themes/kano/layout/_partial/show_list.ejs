@@ -1,0 +1,11 @@
+
+<% page.posts.each(function (post) { %>
+<a href="<%- url_for(post.path) %>">
+    <div class="post_list">
+        <p class="title"><%= post.title %></p>
+        <p class="content">
+            <%- post.excerpt %>
+        </p>
+    </div>
+</a>
+<% }) %>

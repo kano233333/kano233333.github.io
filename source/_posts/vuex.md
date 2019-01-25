@@ -1,6 +1,8 @@
 ---
 title: vuex
-tags:
+tags: 
+  - vue
+  - vuex
 ---
 
 ## 安装

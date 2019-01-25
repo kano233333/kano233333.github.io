@@ -1,6 +1,7 @@
 ---
 title: vue-init
-tags:
+tags: 
+  - vue
 ---
 
 ## 目录结构

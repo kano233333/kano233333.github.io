@@ -1,6 +1,7 @@
 ---
 title: mysql
-tags:
+tags: 
+   - mysql
 ---
 
 ## 各种问题
