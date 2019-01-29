@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96a7228c-2bc7-4f75-9719-3c47b0459ee8" name="Default" comment="" />
+    <list default="true" id="96a7228c-2bc7-4f75-9719-3c47b0459ee8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kano/source/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kano/source/css/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/css/post.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,26 +35,38 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/kano/source/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="5491">
+              <caret line="289" column="17" selection-start-line="289" selection-start-column="17" selection-end-line="289" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animation.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/kano/source/css/animation.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+      <file leaf-file-name="基本操作.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/基本操作.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="19">
+                <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/head.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="media.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/kano/source/css/media.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1121">
+              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -60,15 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="18" selection-start-column="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/kano/source/css/post.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -180,13 +187,15 @@
         <option value="$PROJECT_DIR$/themes/kano/_config.yml" />
         <option value="$PROJECT_DIR$/themes/kano/layout/tags.ejs" />
         <option value="$PROJECT_DIR$/themes/kano/layout/_partial/all_tags.ejs" />
-        <option value="$PROJECT_DIR$/themes/kano/source/css/media.css" />
         <option value="$PROJECT_DIR$/themes/kano/layout/index.ejs" />
         <option value="$PROJECT_DIR$/themes/kano/layout/_partial/toc.ejs" />
-        <option value="$PROJECT_DIR$/themes/kano/source/css/post.css" />
-        <option value="$PROJECT_DIR$/themes/kano/source/css/main.css" />
         <option value="$PROJECT_DIR$/themes/kano/source/css/animation.css" />
         <option value="$PROJECT_DIR$/themes/kano/layout/_partial/head.ejs" />
+        <option value="$PROJECT_DIR$/themes/kano/source/css/media.css" />
+        <option value="$PROJECT_DIR$/source/_posts/基本操纵.md" />
+        <option value="$PROJECT_DIR$/themes/kano/source/css/post.css" />
+        <option value="$PROJECT_DIR$/themes/kano/source/css/main.css" />
+        <option value="$PROJECT_DIR$/source/_posts/基本操作.md" />
       </list>
     </option>
   </component>
@@ -204,7 +213,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1315" />
@@ -218,7 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,24 +237,7 @@
             <path>
               <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="scaffolds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -258,21 +249,6 @@
               <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="kano" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="kano" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="kano" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="_partial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -288,28 +264,12 @@
               <item name="kano" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="kano" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kano233333.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kano233333.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="kano" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,13 +283,14 @@
     <property name="settings.editor.selected.configurable" value="configurable.stylesheets" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\source\css" />
+      <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\source\css\img" />
       <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\source\_posts" />
       <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\source\css\font" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Documents\web\kano233333.github.io\themes\kano\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,12 +338,14 @@
       <workItem from="1548167674666" duration="5851000" />
       <workItem from="1548347003627" duration="518000" />
       <workItem from="1548396723617" duration="2171000" />
-      <workItem from="1548400278184" duration="10232000" />
+      <workItem from="1548400278184" duration="11129000" />
+      <workItem from="1548592346784" duration="4583000" />
+      <workItem from="1548735435793" duration="256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84181000" />
+    <option name="totallyTimeSpent" value="89917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,15 +357,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="SvgViewer" order="3" show_stripe_button="false" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5044843" side_tool="true" weight="0.36115843" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.32879046" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32879046" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4955157" visible="true" weight="0.33049405" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4955157" visible="true" weight="0.41396934" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24439462" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
@@ -430,8 +393,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/landscape/layout/layout.ejs" />
-    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/header.ejs" />
+    <entry file="file://$PROJECT_DIR$/themes/kano/layout/layout.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/基本操作.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="494">
+            <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/landscape/languages/de.yml" />
     <entry file="file://$PROJECT_DIR$/../js233/litter/litterThing/try/git_php.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -644,13 +622,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/tags_all.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/tags_all.ejs" />
     <entry file="file://$PROJECT_DIR$/source/_posts/2018.9.25.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -745,10 +717,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/all_tags.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/kano/layout/layout.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/kano/source/css/media.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="1121">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/kano/source/css/post.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -759,48 +759,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/source/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/source/css/post.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/all_tags.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/layout/tags.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/layout/layout.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/kano/source/css/animation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="19">
           <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/kano/layout/_partial/head.ejs">
+    <entry file="file://$PROJECT_DIR$/themes/kano/source/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="5491">
+          <caret line="289" column="17" selection-start-line="289" selection-start-column="17" selection-end-line="289" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/基本操作.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="19">
+            <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
