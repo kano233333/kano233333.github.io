@@ -1,0 +1,85 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        canvas动画
+    </h1>
+    <hr>
+    <h2 id="动画原理"><a href="#动画原理" class="headerlink" title="动画原理"></a>动画原理</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCanvas = <span class="built_in">document</span>.getElementById(<span class="string">'my-canvas'</span>);</span><br><span class="line"><span class="keyword">var</span> ctx = myCanvas.getContext(<span class="string">'2d/3d'</span>);</span><br><span class="line">ctx.fillRect(x,y,w,h);</span><br></pre></td></tr></table></figure>
+<p>canvas 画上屏的元素，立即被像素化，不再是一个对象</p>
+<p>canvas 运动的原理：（无限循环）清屏—&gt;重绘  +   setInterval</p>
+<p>清屏：清除整个画布<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clearRect(<span class="number">0</span>,<span class="number">0</span>,widht,height)</span><br></pre></td></tr></table></figure></p>
+<h2 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h2><p>核心：<strong>面向对象</strong></p>
+<p>将一个形状封装为一个对象，必要的变量定义在对象实例中，公共的函数可以最好定义在原型上</p>
+<p>⭐技巧：<strong>产生多个对象</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> objArr = [];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">obj</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="keyword">this</span>.x = ...;</span><br><span class="line"> ...</span><br><span class="line"> objArr.push(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>只要一进行<strong>new obj()</strong>  —&gt;   在objArr数组中添加对象实例</p>
+<p>结合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">new</span> obj();</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;objArr.lenght;i++)&#123;</span><br><span class="line">    objArr[i].xxx();  <span class="comment">//因为每次都会清空画布，要保证原来的运动的图形还存在---&gt;使用for循环每次进行触发 </span></span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ctx.clearRect(<span class="number">0</span>,<span class="number">0</span>,ctx.width,ctx.height);</span><br><span class="line">&#125;,<span class="number">200</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="结合图片"><a href="#结合图片" class="headerlink" title="结合图片"></a>结合图片</h2><p>将图片连续起来，做成动态效果</p>
+<p>要在图片加载完成之后使用图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var img = new Image();</span><br><span class="line"></span><br><span class="line">img.onload = function()&#123;</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法：</p>
+<blockquote>
+<p>x,y：定位图片的坐标<br>width,height：设置图片的宽高<br>sx,sy：定位图片被剪切的坐标<br>swidth,sheight：设置被剪切部分的宽高</p>
+<ul>
+<li><p>三个参数</p>
+<blockquote>
+<p>  ctx.drawImage(img,x,y)</p>
+</blockquote>
+</li>
+<li><p>五个参数</p>
+<blockquote>
+<p>  ctx.drawImage(img,x,y,width,height)</p>
+</blockquote>
+</li>
+<li>九个参数<blockquote>
+<p>  ctx.drawImage(img,sx,sy,swidth,sheight,x,y,width,height)</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#动画原理"><span class="toc-number">1.</span> <span class="toc-text">动画原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#核心"><span class="toc-number">2.</span> <span class="toc-text">核心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结合图片"><span class="toc-number">3.</span> <span class="toc-text">结合图片</span></a></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>

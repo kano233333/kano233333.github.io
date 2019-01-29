@@ -1,0 +1,78 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        rain
+    </h1>
+    <hr>
+    <p>canvas实现小雨滴</p>
+<a id="more"></a>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><img src="/css/md-img/rain1.PNG" alt="img"><img src="/css/md-img/rain1.PNG" alt="img"></p>
+<p>由<strong>渐变</strong>方块组成</p>
+<p>每次<strong>不对画布进行清屏</strong>，每次为画布加带<strong>透明度</strong>的背景，背景的透明度会进行<strong>叠加</strong>，之前的方块被盖在叠加过后的背景下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ctx.fillStyle = <span class="string">"rgba(0,0,0,"</span>+**<span class="number">0.02</span>**+<span class="string">")"</span>;  <span class="comment">//背景颜色为rbg(0,0,0)</span></span><br><span class="line">    ctx.fillRect(<span class="number">0</span>,<span class="number">0</span>,w,h);  <span class="comment">//w=100vw,h=100vh</span></span><br><span class="line">    ...  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现<a href="/Canvas/rain.html"><img src="/css/img/icon.png" style="width:40px;height:40px;"></a></h2><h3 id="随机生成无数小雨滴"><a href="#随机生成无数小雨滴" class="headerlink" title="随机生成无数小雨滴"></a>随机生成无数小雨滴</h3><blockquote>
+<p>使用数组<br>在对象实例中：arr.push(this);</p>
+</blockquote>
+<h3 id="泡泡效果"><a href="#泡泡效果" class="headerlink" title="泡泡效果"></a>泡泡效果</h3><blockquote>
+<p>同雨滴效果<br>用strokr()画<br>r++;</p>
+</blockquote>
+<h3 id="大概思路："><a href="#大概思路：" class="headerlink" title="大概思路："></a>大概思路：</h3><blockquote>
+<ul>
+<li>创建雨滴，泡泡对象 </li>
+<li>通过new Rain()  push(this)创建无数个雨滴 </li>
+<li>定时器中循环调用雨滴数组里每个对象的方法</li>
+<li>当雨滴走过随机生成的长度</li>
+<li>new Paopao(x,y) 传入雨滴消失点的坐标(x,y) </li>
+<li>同理产生泡泡</li>
+<li>雨滴，泡泡的消失：</li>
+<li>将定时器里循环的i传入，对象的方法，达到条件，将雨滴/泡泡数组<strong>splice(i,0)</strong></li>
+</ul>
+</blockquote>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#随机生成无数小雨滴"><span class="toc-number">2.1.</span> <span class="toc-text">随机生成无数小雨滴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泡泡效果"><span class="toc-number">2.2.</span> <span class="toc-text">泡泡效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大概思路："><span class="toc-number">2.3.</span> <span class="toc-text">大概思路：</span></a></li></ol></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>

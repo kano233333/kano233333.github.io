@@ -1,0 +1,70 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        canvas旋转
+    </h1>
+    <hr>
+    <p>ctx.rotate(x);</p>
+<p>默认是围绕ctx画布原点（0，0）进行旋转  【不好】</p>
+<p>将坐标系移动到旋转对象的几何中心再进行旋转</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctx.translate(x,y);</span><br><span class="line">ctx.rotate(x);</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<p><strong>先旋转—&gt;再画图</strong></p>
+<p>如果设置定时setInterval要保存每次旋转的角度</p>
+<p><img src="/css/md-img/rotate1.PNG" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctx.save();</span><br><span class="line">...</span><br><span class="line">ctx.restore();</span><br></pre></td></tr></table></figure>
+<p><img src="/css/md-img/rotate2.PNG" alt="img"><img src="/css/md-img/rotate3.PNG" alt="img"></p>
+<p>坐标轴y方向是向下的</p>
+<p><img src="/css/md-img/rotate4.PNG" alt="img"></p>
+<p>下落+旋转</p>
+<p><img src="/css/md-img/rotate5.PNG" alt="img"></p>
+<p>所以 在下落的过程中必须保证x,y的坐标是相对坐标原点是不变的</p>
+<p>—-&gt;  不改变 x,y 的值，改变坐标原点的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ctx.save();</span><br><span class="line">ctx.translate(<span class="number">100</span>,<span class="number">100</span>+h);   <span class="comment">// h:每次下落的高度</span></span><br><span class="line">ctx.drawImage(image,<span class="number">100</span>,<span class="number">100</span>);</span><br><span class="line">ctx.rotate(x);</span><br><span class="line">ctx.restore();</span><br></pre></td></tr></table></figure>
+
+</div>
+<div id="post_toc">
+    
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>
