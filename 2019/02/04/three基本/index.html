@@ -1,0 +1,106 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        three基本
+    </h1>
+    <hr>
+    <p>threejs 嘿嘿嘿</p>
+<a id="more"></a>
+<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><blockquote>
+<p><a href="https://github.com/mrdoob/three.js/tree/dev/build" target="_blank" rel="noopener">three.js</a></p>
+</blockquote>
+<h1 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h1><ul>
+<li><h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>图形最后全部通过add()函数展示到场景上。</p>
+</blockquote>
+</li>
+<li><h2 id="摄像机"><a href="#摄像机" class="headerlink" title="摄像机"></a>摄像机</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.PerspectiveCamera(a,b,c,d);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>PerspectiveCamera(透视摄像机)</p>
+<p>a : 视野角度</p>
+<p>b : 长宽比</p>
+<p>c : 远剪切面</p>
+<p>d : 近剪切面</p>
+</blockquote>
+</li>
+<li><h2 id="渲染器"><a href="#渲染器" class="headerlink" title="渲染器"></a>渲染器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer();</span><br><span class="line"><span class="comment">//设置渲染器大小</span></span><br><span class="line">renderer.serSize(width,height);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>最后渲染器使用\<canvas>标签展示到场景上</canvas></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="图形"><a href="#图形" class="headerlink" title="图形"></a>图形</h1><ul>
+<li><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cubeGeometry = <span class="keyword">new</span> THREE.BoxGeometry(x,y,z);</span><br></pre></td></tr></table></figure>
+</li>
+<li><h2 id="材质"><a href="#材质" class="headerlink" title="材质"></a>材质</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cubeMaterial = <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</span><br><span class="line">    <span class="comment">//设置属性</span></span><br><span class="line">    color:xxx</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(cubeGeometry,cubeMaterial);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>包含一个几何体和几何体材质的对象</p>
+</blockquote>
+</li>
+<li><h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cube.position.x = x;</span><br><span class="line">cube.position.y = y;</span><br><span class="line">cube.position.z = z;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>设置几何图形的位置，默认（0，0，0）</p>
+</blockquote>
+</li>
+<li><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  requestAnimationFrame(animate);</span><br><span class="line">  ...</span><br><span class="line">  <span class="comment">//旋转</span></span><br><span class="line">  cube.rotation.x += <span class="number">0.01</span>;</span><br><span class="line">  cube.rotation.y += <span class="number">0.01</span>;</span><br><span class="line">  cube.rotation.z += <span class="number">0.01</span>;</span><br><span class="line">  <span class="comment">//移动</span></span><br><span class="line">  cube.position....</span><br><span class="line">&#125;</span><br><span class="line">animate();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>通过<strong>requestAnimationFrame</strong>来计时</p>
+</blockquote>
+</li>
+<li><h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scene.add(cube);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>将图形添加到场景上</p>
+</blockquote>
+</li>
+</ul>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引入"><span class="toc-number">1.</span> <span class="toc-text">引入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本组成"><span class="toc-number">2.</span> <span class="toc-text">基本组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#场景"><span class="toc-number">2.1.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#摄像机"><span class="toc-number">2.2.</span> <span class="toc-text">摄像机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渲染器"><span class="toc-number">2.3.</span> <span class="toc-text">渲染器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图形"><span class="toc-number">3.</span> <span class="toc-text">图形</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建"><span class="toc-number">3.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#材质"><span class="toc-number">3.2.</span> <span class="toc-text">材质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格"><span class="toc-number">3.3.</span> <span class="toc-text">网格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#位置"><span class="toc-number">3.4.</span> <span class="toc-text">位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画"><span class="toc-number">3.5.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加"><span class="toc-number">3.6.</span> <span class="toc-text">添加</span></a></li></ol></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>
