@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96a7228c-2bc7-4f75-9719-3c47b0459ee8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/three基本.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/express.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/express.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/基本操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/基本操作.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kano/source/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kano/source/js/common.js" afterDir="false" />
-    </list>
+    <list default="true" id="96a7228c-2bc7-4f75-9719-3c47b0459ee8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,7 +288,7 @@
   <component name="PropertiesComponent">
     <property name="ToolWindowDatabase.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../three" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -363,12 +357,12 @@
       <workItem from="1548738635815" duration="6986000" />
       <workItem from="1549110030928" duration="16000" />
       <workItem from="1549265975655" duration="1280000" />
-      <workItem from="1551599055143" duration="2700000" />
+      <workItem from="1551599055143" duration="2965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100899000" />
+    <option name="totallyTimeSpent" value="101164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,6 +375,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="SvgViewer" order="3" show_stripe_button="false" side_tool="true" />
@@ -388,7 +383,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32879046" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4955157" visible="true" weight="0.5349233" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4955157" visible="true" weight="0.48381603" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24439462" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
