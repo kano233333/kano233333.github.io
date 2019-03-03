@@ -1,0 +1,59 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        defineProperty
+    </h1>
+    <hr>
+    <p><a href="https://www.cnblogs.com/gaoning/p/8335748.html" target="_blank" rel="noopener">https://www.cnblogs.com/gaoning/p/8335748.html</a></p>
+<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">Objetc.defineProperty(obj,<span class="string">'name'</span>,&#123;</span><br><span class="line">    value:<span class="string">''</span>, <span class="comment">//值</span></span><br><span class="line">    writable:<span class="literal">false</span> | <span class="literal">true</span>, <span class="comment">//是否可写</span></span><br><span class="line">    enumerable:<span class="literal">false</span> | <span class="literal">true</span>, <span class="comment">//是否可枚举</span></span><br><span class="line">    configurable:<span class="literal">false</span> | <span class="literal">true</span> <span class="comment">//是否是可被删除的（delete）</span></span><br><span class="line">&#125;)</span><br><span class="line">||</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">'name'</span>,&#123;</span><br><span class="line">    set:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="comment">//设置值触发的函数</span></span><br><span class="line">    get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="comment">//获取值触发的函数</span></span><br><span class="line">    enumerable:<span class="literal">false</span> | <span class="literal">true</span>,</span><br><span class="line">    configurable:<span class="literal">false</span> | <span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="get-与-set"><a href="#get-与-set" class="headerlink" title="get 与 set"></a>get 与 set</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">'name'</span>,&#123;</span><br><span class="line">    set:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'...set...'</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'...get...'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'aaa'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    enumerable:<span class="literal">false</span> | <span class="literal">true</span>,</span><br><span class="line">    configurable:<span class="literal">false</span> | <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(obj.name); <span class="comment">// ...get...  aaa</span></span><br><span class="line">obj.name = <span class="string">'bbb'</span>; <span class="comment">// ...set...</span></span><br></pre></td></tr></table></figure>
+<h2 id="简单的input双向绑定"><a href="#简单的input双向绑定" class="headerlink" title="简单的input双向绑定"></a>简单的input双向绑定</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">'inputVal'</span>,&#123;</span><br><span class="line">    set()&#123;&#125;,</span><br><span class="line">    get()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    enumerable:<span class="literal">true</span>,</span><br><span class="line">    configurable:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'obj.inputVal'</span>); <span class="comment">//在input里输入东西，再打印</span></span><br></pre></td></tr></table></figure>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本"><span class="toc-number">1.</span> <span class="toc-text">基本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#get-与-set"><span class="toc-number">2.</span> <span class="toc-text">get 与 set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单的input双向绑定"><span class="toc-number">3.</span> <span class="toc-text">简单的input双向绑定</span></a></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>

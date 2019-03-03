@@ -1,0 +1,92 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        reduce
+    </h1>
+    <hr>
+    <h1 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><blockquote>
+<p>方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">total,num</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> total+num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr.reduce(add)); <span class="comment">//'abc'</span></span><br></pre></td></tr></table></figure>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><blockquote>
+<p>每次将add函数 return 的内容,作为下一次调用add函数的第一个参数</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(callback,[initialValue])</span><br></pre></td></tr></table></figure>
+<h3 id="callback"><a href="#callback" class="headerlink" title="callback()"></a>callback()</h3><blockquote>
+<p>每次回调的函数</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">callback(previousValue,currentValue,index,array);</span><br></pre></td></tr></table></figure>
+<h4 id="previousValue"><a href="#previousValue" class="headerlink" title="previousValue"></a>previousValue</h4><blockquote>
+<p>第一次使用：</p>
+<ul>
+<li><p>指定了reduce里的第二个参数initialValue</p>
+<p>previousValue = initialValue</p>
+</li>
+<li><p>没有指定了reduce里的第二个参数initialValue</p>
+<p>previousValue = arr[0]</p>
+</li>
+</ul>
+<p>后面调用callback</p>
+<p>previousValue = 函数上次 return 的值</p>
+</blockquote>
+<h4 id="currentValue"><a href="#currentValue" class="headerlink" title="currentValue"></a>currentValue</h4><blockquote>
+<p>数组中当前被处理的元素</p>
+</blockquote>
+<h4 id="index"><a href="#index" class="headerlink" title="index"></a>index</h4><blockquote>
+<p>当前元素在数组中的索引</p>
+</blockquote>
+<h4 id="array"><a href="#array" class="headerlink" title="array"></a>array</h4><blockquote>
+<p>调用 reduce 的数组</p>
+</blockquote>
+<h3 id="initialValue"><a href="#initialValue" class="headerlink" title="initialValue"></a>initialValue</h3><blockquote>
+<p>指定第一次调用callback的第一个参数</p>
+</blockquote>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p><a href="https://segmentfault.com/a/1190000010731933#articleHeader2" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010731933#articleHeader2</a></p>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reduce"><span class="toc-number">1.</span> <span class="toc-text">reduce</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">1.1.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">1.2.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#callback"><span class="toc-number">1.2.1.</span> <span class="toc-text">callback()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#previousValue"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">previousValue</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#currentValue"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">currentValue</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#index"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">index</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#array"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">array</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#initialValue"><span class="toc-number">1.2.2.</span> <span class="toc-text">initialValue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶"><span class="toc-number">1.3.</span> <span class="toc-text">进阶</span></a></li></ol></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>

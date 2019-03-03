@@ -1,0 +1,112 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        今日头条 总结
+    </h1>
+    <hr>
+    <h2 id="hash-与-history"><a href="#hash-与-history" class="headerlink" title="hash 与 history"></a><a href="https://blog.csdn.net/lyn1772671980/article/details/80804419" target="_blank" rel="noopener">hash 与 history</a></h2><h2 id="刷新组件"><a href="#刷新组件" class="headerlink" title="刷新组件"></a>刷新组件</h2><blockquote>
+<p>给要刷新的组件绑定 <strong>v-if</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if=&apos;fresh&apos;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>刷新组件 让绑定的参数先false再true</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flushCom()&#123;</span><br><span class="line">    <span class="keyword">this</span>.fresh = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> (<span class="keyword">this</span>.fresh = <span class="literal">true</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="v-for-key"><a href="#v-for-key" class="headerlink" title="v-for  key"></a><a href="https://segmentfault.com/a/1190000013810844" target="_blank" rel="noopener">v-for  key</a></h2><blockquote>
+<p>在v-for里指定key，每一条都有唯一的一个key来进行识别，主要是为了高效更新虚拟DOM</p>
+</blockquote>
+<h2 id="传多张图片"><a href="#传多张图片" class="headerlink" title="传多张图片"></a>传多张图片</h2><blockquote>
+<p>传多张图片的数组，会变成字符串</p>
+</blockquote>
+<p>解决：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> form = <span class="keyword">new</span> FormData();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> imgs)&#123;  <span class="comment">//将多张图的数组循环append进form里</span></span><br><span class="line">    form.append(<span class="string">'pic'</span>,imgs[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="屏幕缩放"><a href="#屏幕缩放" class="headerlink" title="屏幕缩放"></a><a href="https://www.quirksmode.org/mobile/viewports.html" target="_blank" rel="noopener">屏幕缩放</a></h2><ul>
+<li><p>原理</p>
+<blockquote>
+<p>当缩小屏幕时，表面上主页面在缩小，实际上是整个屏幕的分辨率在变大，html设置的width与height所占的px的比例就变小了</p>
+<p>放大屏幕，反之</p>
+</blockquote>
+</li>
+<li><p>解决</p>
+<blockquote>
+<p>媒体查询</p>
+</blockquote>
+<p>居中缩小：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">1500px</span>)&#123;</span><br><span class="line">    <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span> <span class="selector-tag">auto</span>;</span><br><span class="line">    <span class="selector-tag">width</span><span class="selector-pseudo">:1200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>放大： </p>
+<p>相当于屏幕变小了</p>
+</li>
+</ul>
+<h2 id="每个页面分离"><a href="#每个页面分离" class="headerlink" title="每个页面分离"></a>每个页面分离</h2><blockquote>
+<p>文章详情页，一定不要用主页传过来的数据</p>
+<p>每个页面最好通过路由的参数，去调后台的接口拿到数据</p>
+</blockquote>
+<h2 id="文章内容innerHTML"><a href="#文章内容innerHTML" class="headerlink" title="文章内容innerHTML"></a>文章内容innerHTML</h2><blockquote>
+<p>拿到的文章内容的数据 </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;p&amp;gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对它进行一次 innerHTML</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>再进行一次innerHTML,就可以正常显示了</p>
+</blockquote>
+<h2 id="请求过快"><a href="#请求过快" class="headerlink" title="请求过快"></a>请求过快</h2><blockquote>
+<p>点赞过快，请求反应不过来，会出事</p>
+<p>加一个标识，来判断请求是否完成</p>
+</blockquote>
+<h2 id="100vw"><a href="#100vw" class="headerlink" title="100vw"></a><a href="https://www.cnblogs.com/yangyang63963/p/5947322.html" target="_blank" rel="noopener">100vw</a></h2><blockquote>
+<p>100vw 是包含滚动条的</p>
+</blockquote>
+<h2 id="window"><a href="#window" class="headerlink" title="window"></a>window</h2><blockquote>
+<p>在每个组件上的window上绑定事件，访问其他页面时，一定要清除</p>
+</blockquote>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hash-与-history"><span class="toc-number">1.</span> <span class="toc-text">hash 与 history</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#刷新组件"><span class="toc-number">2.</span> <span class="toc-text">刷新组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-for-key"><span class="toc-number">3.</span> <span class="toc-text">v-for  key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传多张图片"><span class="toc-number">4.</span> <span class="toc-text">传多张图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#屏幕缩放"><span class="toc-number">5.</span> <span class="toc-text">屏幕缩放</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#每个页面分离"><span class="toc-number">6.</span> <span class="toc-text">每个页面分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章内容innerHTML"><span class="toc-number">7.</span> <span class="toc-text">文章内容innerHTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#请求过快"><span class="toc-number">8.</span> <span class="toc-text">请求过快</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#100vw"><span class="toc-number">9.</span> <span class="toc-text">100vw</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#window"><span class="toc-number">10.</span> <span class="toc-text">window</span></a></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>

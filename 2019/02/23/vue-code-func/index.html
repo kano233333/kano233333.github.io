@@ -1,0 +1,64 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        vue_code_func
+    </h1>
+    <hr>
+    <h1 id="object-freeze"><a href="#object-freeze" class="headerlink" title="object.freeze()"></a>object.freeze()</h1><p>Object.freeze() 方法可以冻结一个对象，冻结指的是不能向这个对象添加新的属性，不能修改其已有属性的值，不能删除已有属性，以及不能修改该对象已有属性的可枚举性、可配置性、可写性。也就是说，这个对象永远是不可变的。该方法返回被冻结的对象。</p>
+<h1 id="toString-call"><a href="#toString-call" class="headerlink" title="toString.call()"></a><a href="https://www.cnblogs.com/chris-oil/p/4276803.html" target="_blank" rel="noopener">toString.call()</a></h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(date)) <span class="comment">//[object Date]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">123</span>)  <span class="comment">// [object Number]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">123</span>).slide(<span class="number">8</span>,<span class="number">-1</span>) <span class="comment">//Number</span></span><br></pre></td></tr></table></figure>
+<h1 id="camelize-将-式字符串改为驼峰式"><a href="#camelize-将-式字符串改为驼峰式" class="headerlink" title="camelize(将-式字符串改为驼峰式)"></a>camelize(将-式字符串改为驼峰式)</h1><p>字符串最后有 - replace 不了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cached</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> cache = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">return</span> (<span class="function"><span class="keyword">function</span> <span class="title">cachedFn</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> hit = cache[str];</span><br><span class="line">      <span class="keyword">return</span> hit || (cache[str] = fn(str))</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h1><h1 id="Object-keys-obj"><a href="#Object-keys-obj" class="headerlink" title="Object.keys(obj)"></a>Object.keys(obj)</h1><blockquote>
+<p>返回一个对象的key组成的数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'aaa'</span>,</span><br><span class="line">    age:<span class="number">15</span>,</span><br><span class="line">    <span class="keyword">from</span>:<span class="string">'cq'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj)); <span class="comment">//['name','age','from']</span></span><br></pre></td></tr></table></figure>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#object-freeze"><span class="toc-number">1.</span> <span class="toc-text">object.freeze()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#toString-call"><span class="toc-number">2.</span> <span class="toc-text">toString.call()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#camelize-将-式字符串改为驼峰式"><span class="toc-number">3.</span> <span class="toc-text">camelize(将-式字符串改为驼峰式)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reduce"><span class="toc-number">4.</span> <span class="toc-text">reduce()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Object-keys-obj"><span class="toc-number">5.</span> <span class="toc-text">Object.keys(obj)</span></a></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>
