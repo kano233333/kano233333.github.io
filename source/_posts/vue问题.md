@@ -99,3 +99,16 @@ tags:
 <router-view :xxx="xxx"></router-view>
 ````````
 
+
+
+## 获取目录下所有文件名
+
+```js
+require,context('../',false/true,正则).keys()
+```
+
+> 有个问题：第一个参数不能有变量
+>
+> https://www.jianshu.com/p/78f7b19932cb
+>
+> 没有解决
