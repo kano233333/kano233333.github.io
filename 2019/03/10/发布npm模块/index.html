@@ -1,0 +1,81 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        发布npm模块
+    </h1>
+    <hr>
+    <h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack my-project</span><br></pre></td></tr></table></figure>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><blockquote>
+<p>主要是：</p>
+<p>编写好的组件 + export出组件</p>
+<p>其他的文件都没什么用</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//export出组件  /src/index.js</span></span><br><span class="line"><span class="keyword">import</span> XXX <span class="keyword">from</span> <span class="string">'./xxx.vue'</span></span><br><span class="line"><span class="keyword">const</span> xxx = <span class="function"><span class="keyword">function</span>(<span class="params">Vue</span>)</span>&#123;</span><br><span class="line">    Vue.component(<span class="string">'xxx'</span>,XXX)  <span class="comment">//直接挂在全局上</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> xxx;</span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,  <span class="comment">//改成export组件的文件</span></span><br><span class="line">  output: &#123;</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">'./dist'</span>),</span><br><span class="line">    publicPath: <span class="string">'/dist/'</span>,</span><br><span class="line">    filename: <span class="string">'xxx.js'</span>,</span><br><span class="line">    library: <span class="string">'xxx'</span>,</span><br><span class="line">    libraryTarget: <span class="string">'umd'</span>,</span><br><span class="line">    umdNamedDefine: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//package.json</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="attr">"private"</span>: <span class="literal">false</span>,</span><br><span class="line">    "main": "dist/xxx.js",  //npm 后使用的文件和打包出的js文件一致</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="npmignore"><a href="#npmignore" class="headerlink" title=".npmignore"></a>.npmignore</h2><blockquote>
+<p>上传忽略的文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.*</span><br><span class="line">*.md</span><br><span class="line">*.yml</span><br><span class="line">build/</span><br><span class="line">node_modules/</span><br><span class="line">src/</span><br></pre></td></tr></table></figure>
+<h2 id="发表"><a href="#发表" class="headerlink" title="发表"></a>发表</h2><blockquote>
+<p>打包出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>登录</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm login</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>发表</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>每次上传前要 <strong>npm build</strong>   &amp;&amp;   <strong>更新版本号（version）</strong></li>
+</ul>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vue"><span class="toc-number">1.</span> <span class="toc-text">vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npmignore"><span class="toc-number">4.</span> <span class="toc-text">.npmignore</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发表"><span class="toc-number">5.</span> <span class="toc-text">发表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-number">6.</span> <span class="toc-text">注意</span></a></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>

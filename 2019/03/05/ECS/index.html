@@ -1,0 +1,101 @@
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>+_+</title>
+    <link rel="icon" href="css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/media.css">
+<link rel="stylesheet" href="/css/animation.css">
+<link rel="stylesheet" href="/css/post.css">
+    <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="container_left">
+    <div id="nav">
+    <div class="nav_wrapper">
+        <ul class="nav_ul">
+            
+            <li class="nav_list">
+                <a class="nav_link" href="/">Home</a>
+            </li>
+            
+            <li class="nav_list">
+                <a class="nav_link" href="https://github.com/kano233333">Github</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+    <!-- Main Content -->
+    <div class="container_right">
+    <div id="post_container">
+    <h1 class="post_title">
+        ECS
+    </h1>
+    <hr>
+    <h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h2 id="xftp"><a href="#xftp" class="headerlink" title="xftp"></a>xftp</h2><h2 id="putty"><a href="#putty" class="headerlink" title="putty"></a>putty</h2><h1 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h1><blockquote>
+<p>用putty连接</p>
+</blockquote>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="node"><a href="#node" class="headerlink" title="node"></a>node</h2><ul>
+<li>下载 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v10.11.0/node-v10.11.0-linux-x64.tar.xz</span><br><span class="line">tar xf  node-v10.11.0-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>软连接</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s  /home/root/node-v10.11.0-linux-x64/bin/node  /usr/local/bin/</span><br><span class="line">sudo ln -s /home/root/node-v10.11.0-linux-x64/bin/node  /usr/local/bin/</span><br></pre></td></tr></table></figure>
+<h2 id="node-模块"><a href="#node-模块" class="headerlink" title="node 模块"></a>node 模块</h2><blockquote>
+<p>npm 全局安装的包，全部要进行软连接</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install xxx</span><br><span class="line">sudo ln -s /usr/local/node-v8.9.3-linux-x64/lib/node_modules/xxx/bin/xxx </span><br><span class="line">/usr/local/bin/</span><br></pre></td></tr></table></figure>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email youEmail</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>会在用户目录<code>~/.ssh/</code>下建立相应的密钥文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -C &apos;you email address@gmail.com&apos; -t rsa</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.cnblogs.com/lxm20145215----/p/5905765.html" target="_blank" rel="noopener">https://www.cnblogs.com/lxm20145215----/p/5905765.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master || webhooks</span><br></pre></td></tr></table></figure>
+<h2 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a><a href="https://www.cnblogs.com/zzsdream/p/6898974.html" target="_blank" rel="noopener">pm2</a></h2><ul>
+<li><p>启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start xx.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start ./bin/www</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.cnblogs.com/zzsdream/p/6898974.html" target="_blank" rel="noopener">自己配置</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run pm2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="安全组"><a href="#安全组" class="headerlink" title="安全组"></a>安全组</h1><blockquote>
+<p>无法访问，考虑设置安全组</p>
+<p>指定端口号范围</p>
+</blockquote>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><ul>
+<li>node</li>
+</ul>
+<blockquote>
+<p>pm2 start xxx</p>
+</blockquote>
+
+</div>
+<div id="post_toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#软件"><span class="toc-number">1.</span> <span class="toc-text">软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#xftp"><span class="toc-number">1.1.</span> <span class="toc-text">xftp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#putty"><span class="toc-number">1.2.</span> <span class="toc-text">putty</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#连接"><span class="toc-number">2.</span> <span class="toc-text">连接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#node"><span class="toc-number">3.1.</span> <span class="toc-text">node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node-模块"><span class="toc-number">3.2.</span> <span class="toc-text">node 模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git"><span class="toc-number">3.3.</span> <span class="toc-text">git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pm2"><span class="toc-number">3.4.</span> <span class="toc-text">pm2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全组"><span class="toc-number">4.</span> <span class="toc-text">安全组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运行"><span class="toc-number">5.</span> <span class="toc-text">运行</span></a></li></ol>
+</div>
+
+<script>
+  cleanJIAO();
+  // tocShow();
+</script>
+
+    </div>
+</div>
+</body>
+</html>
